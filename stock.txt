@@ -1,0 +1,4 @@
+precioUnitario,producto,codigo
+150,jabon,123j
+200,harina,456h
+500,atun,789a
