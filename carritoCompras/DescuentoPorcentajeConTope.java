@@ -26,7 +26,12 @@ public class DescuentoPorcentajeConTope extends Descuento{
 
 
 	@Override
-	public float descontar(float precioInicial) {
+	public float descontar(float precioInicial) throws Exception{
+		if(precioInicial == 0) {
+			throw new Exception("No se puede aplicar descuento porque el costo es $0");
+		}
+		
+		
 		float precioFinal = precioInicial;
 		
 		
@@ -34,7 +39,10 @@ public class DescuentoPorcentajeConTope extends Descuento{
 				 precioFinal = precioInicial - (precioInicial * (1 - this.getValor()));
 			}
 			
-		
+		if (this.getValor() > 1) {
+			throw new Exception("El valor con descuento no puede ser menor a $0");
+		}
+			
 		return precioFinal;
 	}
 

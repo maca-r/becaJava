@@ -17,7 +17,7 @@ public abstract class Descuento {
 		this.valor = valor;
 	}
 	
-	public abstract float descontar(float precioInicial);
+	public abstract float descontar(float precioInicial) throws Exception;
 
 	
 	
